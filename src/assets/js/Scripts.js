@@ -1,4 +1,6 @@
 
+import { Display } from "./Display.js";
+
 // HTML Elements
 const displayValuePrevious = document.getElementById("value-previous");
 const displayValueCurrent = document.getElementById("value-current");
@@ -14,3 +16,9 @@ buttonsNumbers.forEach(button => {
 buttonsOperators.forEach(button => {
     button.addEventListener("click", () => display.compute(button.value));
 });
+
+const buttonDelete = document.querySelector(".btn-delete");
+const buttonReset = document.querySelector(".btn-reset");
+
+buttonDelete.addEventListener("click", () => display.delete());
+buttonReset.addEventListener("click", () => display.deleteEverything());
